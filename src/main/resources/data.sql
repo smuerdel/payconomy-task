@@ -1,0 +1,1 @@
+insert into users (username, firstname, surname, age, email, create_date) values ('smuerdel', 'Samuel', 'Mürdel', 26, 's.chipsfrisch@web.de', '2023-01-01 00:00:00')
