@@ -7,14 +7,15 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name="users")
 public class User implements Persistable<String>, Comparable<User> {
 
     @Id
     @Column(length = 100, updatable = false, nullable = false, insertable = false)
-    private String userName;
+    private String username;
 
-    private String firstName;
-    private String surName;
+    private String firstname;
+    private String surname;
     private Integer age;
     private String email;
 
@@ -28,13 +29,13 @@ public class User implements Persistable<String>, Comparable<User> {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 59 * hash + Objects.hashCode(userName);
+        hash = 59 * hash + Objects.hashCode(username);
         return hash;
     }
 
     @Override
     public String getId() {
-        return getUserName();
+        return getUsername();
     }
 
     @Override
@@ -44,7 +45,7 @@ public class User implements Persistable<String>, Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-        return this.userName.compareTo(o.getUserName());
+        return this.username.compareTo(o.getUsername());
     }
 
 
@@ -52,28 +53,28 @@ public class User implements Persistable<String>, Comparable<User> {
 
 
     //getter setter standard stuff
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstName) {
+        this.firstname = firstName;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setSurname(String surName) {
+        this.surname = surName;
     }
 
     public Integer getAge() {
