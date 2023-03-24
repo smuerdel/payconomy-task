@@ -48,9 +48,21 @@ public class User implements Persistable<String>, Comparable<User> {
         return this.username.compareTo(o.getUsername());
     }
 
+    public Date getCreateDate() {
+        return createDate;
+    }
 
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
 
+    public Date getUpdateDate() {
+        return updateDate;
+    }
 
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
 
     //getter setter standard stuff
     public String getUsername() {
