@@ -55,7 +55,7 @@ public class UserRepositoryTest {
     public void createPinkas() {
         User pinkas = new User();
         pinkas.setAge(28);
-        pinkas.setEmail("pinkas@hotmail.de");
+        pinkas.setEmail("pinkas@web.de");
         pinkas.setFirstname("Pinkas");
         pinkas.setUsername("pinkas");
         pinkas.setSurname("Mürdel");
